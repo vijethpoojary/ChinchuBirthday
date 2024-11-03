@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <span class="card-click-here">Click Here Chinchu &#128071</span>
+            <div class="outside">
+                <h1>Happy Birthday</h1>
+                <h3>My dear best friend, may god bless you with abundant joy on your birthday and always!<br>
+                    Thank you for always being by my side and having my back.</h3>
+            </div>
+            <div class="inside">
+                <img src="birthday-cake.gif" />
+                <h3>Wishing you a very Happy Birthday! May life lead you to great happiness, success, and hope that all your wishes come true!</h3>
+            </div>
+        </div>
+        
+        <!-- Click Here Prompt -->
+        <span class="click-here-prompt">Click All Of These Chinchu &#128071</span>
+        
+        <div class="block">
+            <div class="frames frame1">
+                <img src="bg2.jpg" alt="">
+                <p>Happy Birthday Chinchu &#10084 Keep smiling, Keep shining &#128525</p>
+            </div>
+            <div class="frames frame2">
+                <img src="bg3.jpg" alt="">
+                <p>&#129392 May this year bring you endless joy, countless blessings, and memories to cherish forever &#128525.</p>
+            </div>
+            <div class="frames frame3">
+                <img src="bg2.jpg" alt="">
+                <p>&#129392 Here's to a birthday filled with love, laughter, and everything you've been hoping for. Wishing you the best year yet! &#128525</p>
+            </div>
+        </div>
+        
+    </div>
+
+    <script>
+        const card = document.querySelector('.card');
+
+        // Add click event listener to the card to toggle rotation
+        card.addEventListener('click', function() {
+            card.classList.toggle('flipped');
+        });
+
+        document.querySelectorAll('.frames').forEach(frame => {
+            frame.addEventListener('click', function(event) {
+                // Stop the event from bubbling up to the card click event
+                event.stopPropagation();
+                
+                // Toggle .frame-rotated class on the clicked frame
+                frame.classList.toggle('frame-rotated');
+            });
+        });
+    </script>
+</body>
+</html>
