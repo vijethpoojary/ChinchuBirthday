@@ -163,5 +163,49 @@ body {
 .click-here-prompt:hover {
     color: yellow; /* Change color on hover for feedback */
 }
+@media (max-width: 768px) {
+    .container {
+        perspective: 1000px;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center items horizontally */
+        justify-content: center; /* Center items vertically */
+        height: 100vh; /* Full viewport height */
+    }
 
+    .card {
+        width: 80vw; /* Make it responsive based on viewport width */
+        height: auto; /* Allow height to adjust */
+        margin: 0 auto; /* Center the card */
+        position: relative; /* Adjust position for mobile */
+    }
 
+    .block {
+        position: relative; /* Adjust positioning */
+        width: 90%; /* Make it responsive */
+        margin: 20px auto; /* Center the block */
+    }
+
+    .frames {
+        width: 100%; /* Make frames full width */
+        height: auto; /* Adjust height for content */
+        margin: 10px 0; /* Add margin for spacing */
+        flex-direction: column; /* Stack frames vertically */
+    }
+
+    .frames img {
+        width: 80px; /* Make images smaller */
+        height: 100px; /* Adjust height accordingly */
+    }
+
+    .card-click-here, .click-here {
+        font-size: large; /* Keep font size consistent */
+        padding-left: 0; /* Remove left padding */
+        text-align: center; /* Center align */
+    }
+
+    .click-here-prompt {
+        text-align: center; /* Center align on mobile */
+        padding-right: 0; /* Remove right padding */
+    }
+}
